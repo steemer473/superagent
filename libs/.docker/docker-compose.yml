@@ -1,7 +1,6 @@
 name: superagent
 services:
   superagent-api:
-    container_name: superagent-api
     networks:
       - superagent_network
     build:
