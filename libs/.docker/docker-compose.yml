@@ -2,7 +2,7 @@ name: superagent
 services:
   superagent-api:
     networks:
-      - superagent_network
+      - shared_network
     build:
       context: ../superagent
       dockerfile: Dockerfile
@@ -59,6 +59,8 @@ services:
     restart: unless-stopped
 
 networks:
+  shared_network:
+    external: true
   superagent_network:
     name: superagent_network
     driver: bridge
